@@ -54,6 +54,9 @@ function flushMetrics() {
       metrics.counters[key] = 0;
     }
 
+    // Clear the gauges
+    metrics.gauges = {};
+
     // Clear the timers
     for (key in metrics.timers) {
       metrics.timers[key] = [];
